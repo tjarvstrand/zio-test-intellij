@@ -1,0 +1,5 @@
+dependencies {
+    implementation "dev.zio:zio_2.13:1.0.5"
+    testImplementation "dev.zio:zio-test_2.13:1.0.5"
+    testImplementation "dev.zio:zio-test-junit_2.13:1.0.5"
+}

@@ -1,0 +1,17 @@
+
+def buildCacheDir = System.env.GRADLE_BUILD_CACHE_DIR
+if(buildCacheDir != null) {
+  println("Using build-cache directory: ${buildCacheDir}")
+  buildCache {
+    local {
+      directory = file(buildCacheDir)
+      removeUnusedEntriesAfterDays = 30
+    }
+  }
+}
+
+rootProject.name = 'com.example.ziotest'
+
+include(':zio-test')
+
+project(':zio-test').projectDir = file('zio-test')
